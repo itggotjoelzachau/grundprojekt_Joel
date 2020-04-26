@@ -1,0 +1,10 @@
+h2 Visar alla notes
+
+p ----------
+- if session["rt2"]
+  - session["rt2"].each do |note|
+   h5  #{note[:rubrik]}
+   p   #{note[:notes]}
+   p postad av: #{note[:user]}
+   p ----------
+end

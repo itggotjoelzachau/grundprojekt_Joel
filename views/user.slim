@@ -1,0 +1,8 @@
+p Ditt användarnamn: #{session["username"]}
+
+
+p Skriv in ditt nya användarnamn här: 
+
+form action="/user/change" method="POST"
+    input type="text" name="ny_namn"
+    input type="submit" value="Ändra användarnamn" /

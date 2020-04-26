@@ -1,0 +1,22 @@
+h5 Du är utloggad, logga in här:
+
+form action="/login" method="POST"
+    input type="text" name="username" placeholder="Användarnamn"
+    input type="text" name="password" placeholder="Lösenord"
+    input type="submit" value="Logga in" /
+
+h5 Registrera dig:
+form action="/register" method="POST"
+    input type="text" name="usernamereg" placeholder="Användarnamn"
+    input type="text" name="passwordreg" placeholder="Lösenord"
+    input type="submit" value="Registrera dig" /
+
+
+h5 Konton som är Registrerade
+p -----------
+- if session["users"]
+  - session["users"].each do |user|
+   h5 Användarnamn: #{user[:username]}
+   h5 Lösenord:  #{user[:password]}
+   p -----------
+end
